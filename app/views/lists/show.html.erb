@@ -1,0 +1,11 @@
+<h1>Lists#show</h1>
+<p> <%= @list.name %> </p>
+<ul>
+<% @list.movies.each do |movie| %>
+<li> <%= movie.title %> </li>
+<%# <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+<%# <%= link_to "Delete bookmark!", bookmark_path(bookmark), {confirm: "Are you sure"} %> %> %>
+<% end %>
+</ul>
+
+<%= link_to "Create a new bookmark!",  new_list_bookmark_path(@list.id) %>
